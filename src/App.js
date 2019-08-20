@@ -3,7 +3,7 @@ import './App.css';
 import useFetch from 'react-fetch-hook'
 
 const config = {
-  SUBREDDIT: 'WeatherGifs',
+  SUBREDDIT: 'nonononoyes',
   ...(window.FAB_SETTINGS || {})
 }
 
