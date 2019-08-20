@@ -2,9 +2,14 @@ import React from 'react';
 import './App.css';
 import useFetch from 'react-fetch-hook'
 
+const config = {
+  SUBREDDIT: 'nonononoyes',
+  ...(window.FAB_SETTINGS || {})
+}
+
 const Component = () => {
   const { data: response } = useFetch(
-    `https://www.reddit.com/r/WeatherGifs/top.json?t=week`
+    `https://www.reddit.com/r/${config.SUBREDDIT}/top.json?t=week`
   )
   if (!response) return <div>Loading...</div>
 
